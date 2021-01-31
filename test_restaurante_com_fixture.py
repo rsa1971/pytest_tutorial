@@ -2,6 +2,7 @@ import pytest
 
 from restaurante import Restaurante
 
+
 @pytest.fixture()
 def restaurante_fila_vazia():
     return Restaurante("Pizzaria X")

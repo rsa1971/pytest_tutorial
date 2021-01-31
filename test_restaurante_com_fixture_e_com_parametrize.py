@@ -2,6 +2,7 @@ import pytest
 
 from restaurante import Restaurante
 
+
 @pytest.fixture()
 def restaurante_fila_vazia():
     return Restaurante("Pizzaria X")
@@ -40,7 +41,7 @@ def test_remove_um_pedido_na_fila_vazia(restaurante_fila_vazia):
     assert restaurante_fila_vazia.pedidos_na_fila == 0
 
 
-@pytest.mark.parametrize("inicial,final", [(0,0), (1,0), (2,1)])
+@pytest.mark.parametrize("inicial, final", [(0, 0), (1, 0), (2, 1)])
 def test_remoção_de_pedidos(inicial, final):
     restaurante = Restaurante("Pizzaria X", inicial)
     restaurante.remove_pedido()
